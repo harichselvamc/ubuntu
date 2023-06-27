@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Processing API</title>
+</head>
+<body>
+    <h1>Image Processing API</h1>
+    <h2>Endpoint: /headbody</h2>
+    <p>
+        <strong>Method:</strong> POST<br>
+        <strong>Description:</strong> Uploads a head and body image and combines them to create a processed image.<br>
+        <strong>Parameters:</strong><br>
+        - head (file): The head image file<br>
+        - body (file): The body image file<br>
+        <strong>Response:</strong><br>
+        - If the request is made from a browser, it will display the processed image.<br>
+        - If the request is made from Postman or a non-browser client, it will return the download link of the processed image in JSON format.
+    </p>
+
+    <h2>Endpoint: /removebackground</h2>
+    <p>
+        <strong>Method:</strong> POST<br>
+        <strong>Description:</strong> Removes the background from an image.<br>
+        <strong>Parameters:</strong><br>
+        - file (file): The image file to remove the background from<br>
+        <strong>Response:</strong><br>
+        - Returns the download link of the background-removed image in JSON format.
+    </p>
+
+    <h2>Endpoint: /resize</h2>
+    <p>
+        <strong>Method:</strong> POST<br>
+        <strong>Description:</strong> Resizes an image to a specified size.<br>
+        <strong>Parameters:</strong><br>
+        - file (file): The image file to resize<br>
+        <strong>Response:</strong><br>
+        - Returns the download link of the resized image in JSON format.
+    </p>
+
+    <h2>Endpoint: /cartoon</h2>
+    <p>
+        <strong>Method:</strong> POST<br>
+        <strong>Description:</strong> Converts an image to a cartoon-like style.<br>
+        <strong>Parameters:</strong><br>
+        - file (file): The image file to convert to a cartoon<br>
+        <strong>Response:</strong><br>
+        - Returns the download link of the cartoonized image in JSON format.
+    </p>
+
+    <h2>Testing with Postman</h2>
+    <p>
+        To test the API endpoints using Postman, follow these steps:
+        <ol>
+            <li>Open Postman and create a new request.</li>
+            <li>Set the request method to <strong>POST</strong>.</li>
+            <li>Choose the desired endpoint: <strong>/headbody</strong>, <strong>/removebackground</strong>, <strong>/resize</strong>, or <strong>/cartoon</strong>.</li>
+            <li>Add the required parameters as <strong>form-data</strong>:
+                <ul>
+                    <li>For <strong>/headbody</strong>, add <strong>head</strong> and <strong>body</strong> parameters of type <strong>File</strong>.</li>
+                    <li>For <strong>/removebackground</strong>, <strong>/resize</strong>, and <strong>/cartoon</strong>, add a <strong>file</strong> parameter of type <strong>File</strong>.</li>
+                </ul>
+            </li>
+            <li>Attach the respective image files to the parameters.</li>
+            <li>Send the request and view the response, which will contain the download link of the processed image.</li>
+        </ol>
+    </p>
+</body>
+</html>
